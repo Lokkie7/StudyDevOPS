@@ -14,7 +14,7 @@
 Задание 2
 
 
-Получившийся код - https://github.com/Lokkie7/ter-homeworks--fork/tree/main/04/src
+Документация - [https://github.com/Lokkie7/ter-homeworks--fork/tree/main/04/src](https://github.com/Lokkie7/ter-homeworks--fork/blob/main/04/src/vpc/README.md)
 
 
 Задание 3
