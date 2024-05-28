@@ -1,4 +1,4 @@
-Получившийся код - 
+Получившийся код - https://github.com/Lokkie7/ter-homeworks--fork/tree/main/04/src
 
 Задание 1
 
@@ -14,7 +14,7 @@
 Задание 2
 
 
-Получившийся код - 
+Получившийся код - https://github.com/Lokkie7/ter-homeworks--fork/tree/main/04/src
 
 
 Задание 3
