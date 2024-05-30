@@ -11,7 +11,7 @@
   
 4. Не было указано правильно название resourse, имя образа nginx было указано неправильно, обращение к ключу было прописано неправильно.
 5. Исправленный код
-\```
+```
 terraform {
   required_providers {
     docker = {
@@ -49,7 +49,7 @@ resource "docker_container" "nginx" {
     external = 9090
   }
 }
-\```
+```
 
 ![Image alt](https://github.com/Lokkie7/StudyDevOPS/blob/main/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20Terraform/5.png)
 
@@ -59,7 +59,7 @@ resource "docker_container" "nginx" {
 
 7. terraform destroy
    terraform.tfstate.
-   \```
+ ```
 {
   "version": 4,
   "terraform_version": "1.8.2",
@@ -69,7 +69,7 @@ resource "docker_container" "nginx" {
   "resources": [],
   "check_results": null
 }
-\```
+```
 9. Потому что установлена опция keep_locally = true
    
 ![Image alt](https://github.com/Lokkie7/StudyDevOPS/blob/main/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20Terraform/8.png)
