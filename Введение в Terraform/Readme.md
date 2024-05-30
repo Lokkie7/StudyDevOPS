@@ -6,6 +6,7 @@
 2. Судя по файлу .gitignore личную информацию допустимо хранить в personal.auto.tfvars
 
 3. Содержание ресурса random_password.random_string
+
 ![Image alt](https://github.com/Lokkie7/StudyDevOPS/blob/main/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20Terraform/3.png)
   
 4. Не было указано правильно название resourse, имя образа nginx было указано неправильно, обращение к ключу было прописано неправильно.
