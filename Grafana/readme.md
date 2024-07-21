@@ -77,4 +77,6 @@ avg_over_time(node_filesystem_avail_bytes{instance=~"$node",fstype=~"ext4"}[1d])
 
 Задание 4
 
+Листинг полученного дашборда здесь:
 
+https://github.com/Lokkie7/StudyDevOPS/blob/main/%D0%9B%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%B3%20Grafana.txt
