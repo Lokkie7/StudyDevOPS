@@ -68,6 +68,13 @@ avg_over_time(node_filesystem_avail_bytes{instance=~"$node",fstype=~"ext4"}[1d])
 Задание 3
 
 
+![image](https://github.com/user-attachments/assets/187456ac-a4c7-48b0-ba53-28aab36b6856)
+
+
+![image](https://github.com/user-attachments/assets/88ebb59d-5dd0-447c-9ad1-b35a70dcce64)
+
+Алертинг можно настроить только для графиков, поэтому для двух оставшихся у меня панелей сделать это невозможно
+
 Задание 4
 
 
