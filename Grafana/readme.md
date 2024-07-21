@@ -19,3 +19,26 @@ im1
 Подключение prometheus как источника данных
 
 веб-интерфейса grafana со списком подключенных Datasource
+
+Задание 2
+
+![image](https://github.com/user-attachments/assets/4a64f598-702c-4a49-92dd-9b1d8da77ea4)
+
+Использованные promql-запросы:
+avg(irate(node_cpu_seconds_total{instance=~"$node",mode="user"}[5m])) by (instance)
+avg(irate(node_cpu_seconds_total{mode="system", instance=~"$node"}[5m])) by (instance)
+avg(irate(node_cpu_seconds_total{instance=~"$node",mode="iowait"}[5m])) by (instance)
+node_load1{instance=~"$node"}
+node_load5{instance=~"$node"}
+node_load15{instance=~"$node"}
+node_memory_MemTotal_bytes
+node_memory_MemAvailable_bytes
+avg_over_time(node_filesystem_size_bytes{instance=~"$node",fstype=~"ext4"}[1d])
+avg_over_time(node_filesystem_avail_bytes{instance=~"$node",fstype=~"ext4"}[1d])
+
+Задание 3
+
+
+Задание 4
+
+
