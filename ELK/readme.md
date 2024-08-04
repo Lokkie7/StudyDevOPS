@@ -16,3 +16,10 @@
 
 Задание 2
 
+Индексы
+
+![alt text](image-3.png)
+
+Просмотр логов
+
+![alt text](image-4.png)
