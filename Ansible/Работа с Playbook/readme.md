@@ -21,3 +21,5 @@
 ![image](https://github.com/user-attachments/assets/468e1b5a-d540-4c69-b018-e1d7f0abc97f)
 
 Задание 9 - 10
+
+https://github.com/Lokkie7/StudyDevOPS/tree/main/Ansible/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20Playbook/playbook
