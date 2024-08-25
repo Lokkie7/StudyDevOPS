@@ -1,0 +1,16 @@
+---
+  el:
+    hosts:
+      centos7:
+        ansible_connection: docker
+  deb:
+    hosts:
+      192.168.1.243:
+        ansible_connection: ssh
+        ansible_user: lokkie7
+        ansible_password: ll090900
+
+  local:
+    hosts:
+      localhost:
+        ansible_connection: local

@@ -1,0 +1,8 @@
+[clickhouse]
+84.201.144.175 ansible_ssh_private_key_file=/home/lokkie7/.ssh/id_rsa_lokkie7 ansible_user=lokkie7
+
+[vector]
+51.250.40.169 ansible_ssh_private_key_file=/home/lokkie7/.ssh/id_rsa_lokkie7 ansible_user=lokkie7
+
+[lighthouse]
+84.201.144.207 ansible_ssh_private_key_file=/home/lokkie7/.ssh/id_rsa_lokkie7 ansible_user=lokkie7

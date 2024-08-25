@@ -1,0 +1,91 @@
+---
+- name: Install Clickhouse
+  hosts: clickhouse
+  handlers:
+    - name: Start clickhouse service
+      become: true
+      ansible.builtin.service:
+        name: clickhouse-server
+        state: restarted
+  tasks:
+    - block:
+        - name: Get clickhouse distrib
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-client-{{ clickhouse_version }}.noarch.rpm"
+            dest: "./clickhouse-client-{{ clickhouse_version }}.noarch.rpm"
+          with_items: "{{ clickhouse_packages }}"
+      rescue:
+        - name: Get clickhouse distrib
+          ansible.builtin.get_url:
+            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-{{ clickhouse_version }}.x86_64.rpm"
+            dest: "./clickhouse-common-static-{{ clickhouse_version }}.rpm"
+    - name: Install clickhouse packages
+      become: true
+      ansible.builtin.yum:
+        name:
+          - clickhouse-common-static-{{ clickhouse_version }}.rpm
+          - clickhouse-client-{{ clickhouse_version }}.noarch.rpm
+          - clickhouse-server-{{ clickhouse_version }}.rpm
+      notify: Start clickhouse service
+    - name: Flush handlers
+      meta: flush_handlers
+    - name: Create database
+      ansible.builtin.command: clickhouse-client -q 'create database logs;'
+      register: create_db
+      failed_when: create_db.rc != 0 and create_db.rc !=82
+      changed_when: create_db.rc == 0
+
+- name: Install Vector
+  hosts: vector
+  handlers:
+    - name: Restart vector
+      become: true
+      ansible.builtin.service:
+        name: vector
+        state: restarted
+  tasks:
+    - name: download vector distribution archive
+      ansible.builtin.shell: curl https://packages.timber.io/vector/0.40.0/vector-0.40.0-x86_64-unknown-linux-musl.tar.gz > ~/vector.tar.gz
+    - name: make dir for distro
+      ansible.builtin.file:
+        path: /home/lokkie7/vector
+        state: directory
+        mode: '0755'
+    - name: unarchive
+      ansible.builtin.unarchive:
+        src: "/home/lokkie7/vector.tar.gz"
+        dest: "/home/lokkie7/vector"
+        remote_src: yes
+    - name: Add a paths
+      ansible.builtin.shell: echo \"export PATH=\"/home/lokkie7/vector/bin:\$PATH\"\" >> $HOME/.profile
+    - name: Create vector.yaml using Jinja2
+      template:
+        src: vector.j2
+        dest: ~/vector/vector-x86_64-unknown-linux-musl/config/vector.yaml
+
+- name: Install Lighthouse
+  hosts: lighthouse
+  become: true
+  handlers:
+    - name: nginx systemd
+      systemd:
+        name: nginx
+        enabled: yes
+        state: started
+  tasks:
+    - name: Install Nginx Web Server on Debian Family
+      ansible.builtin.apt:
+        name: nginx
+        state: latest
+      notify: nginx systemd
+    - name: Copy lighthouse
+      ansible.builtin.copy:
+        src: /home/lokkie7/ansible/task_3/playbook/lighthouse/
+        dest: /var/www/html/
+        owner: root
+        group: root
+        mode: '0644'
+    - name: Replace nginx.conf
+      ansible.builtin.template:
+        src: templates/nginx.conf
+        dest: /etc/nginx/nginx.conf
