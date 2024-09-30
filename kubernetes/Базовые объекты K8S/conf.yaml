@@ -1,10 +1,27 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-1
+  name: test
+  labels:
+    app.kubernetes.io/name: test-net
 spec:
   containers:
-  - name: pod-1
+  - name: test-net
     image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
     ports:
-    - containerPort: 80
+    - containerPort: 8080
+      name: http-web-svc
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netology-web
+spec:
+  selector:
+    app.kubernetes.io/name: test-net
+  ports:
+  - protocol: TCP
+    port: 8080
+    name: http-web-svc
