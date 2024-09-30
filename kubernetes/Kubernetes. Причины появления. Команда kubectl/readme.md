@@ -1,4 +1,4 @@
-1 - Установка MicroK8s](https://github.com/user-attachments/assets/2af9efb0-06b5-44cf-bfc3-e261075dd6bf)
+1 - Установка MicroK8s
 
 ![1 - Установка MicroK8s](https://github.com/user-attachments/assets/2af9efb0-06b5-44cf-bfc3-e261075dd6bf)
 
