@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 5dep
+spec:
+  selector:
+    matchLabels:
+      app: 5dep
+  template:
+    metadata:
+      labels:
+        app: 5dep
+    spec:
+      containers:
+      - name: init-myservice
+        image: busybox:1.28
+        command: ['sh', '-c', "while true ; do date >> /dat/datetime ; sleep 5 ; done"]
+        volumeMounts:
+        - name: pv-storage
+          mountPath: /dat
+      - name: network-multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: pv-storage
+          mountPath: /dat
+        env:
+        - name: HTTP_PORT
+          value: "1180"
+        - name: HTTPS_PORT
+          value: "11443"
+        - name: X_PORT
+          value: "8080"
+        ports:
+        - containerPort: 1180
+          name: http-port
+        - containerPort: 11443
+          name: https-port
+        - containerPort: 8080
+          name: x-port
+        resources:
+          requests:
+            cpu: "1m"
+            memory: "20Mi"
+          limits:
+            cpu: "10m"
+            memory: "20Mi"
+      volumes:
+        - name: pv-storage
+          persistentVolumeClaim:
+            claimName: pvc-vol1
