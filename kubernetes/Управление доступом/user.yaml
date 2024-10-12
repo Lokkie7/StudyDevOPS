@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: test-role
+  namespace: my-project-prod
+rules:
+  - apiGroups: [ apps ]
+    resources: [ pods ]
+    verbs: [ get, list ]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: test-role
+rules:
+  - apiGroups: [ apps ]
+    resources: [ pods ]
+    verbs: [ get, list ]
