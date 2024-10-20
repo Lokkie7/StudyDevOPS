@@ -9,3 +9,7 @@
 3 - ответ балансировщика
 
 ![image](https://github.com/user-attachments/assets/92bc41f0-8e56-4f57-97d5-b0f3462446fb)
+
+4 - созданный бакет
+
+![image](https://github.com/user-attachments/assets/a8f3422b-5011-4a69-b1da-8b433dd0e494)
