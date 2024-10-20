@@ -7,4 +7,7 @@
 
 ![Uploading 2 - создание nat инстанса.png…]()
 
+3 - проверка доступа в интернет с нат вм
+
+![image](https://github.com/user-attachments/assets/4942e26f-2f36-4205-a75d-975842dbe24c)
 
