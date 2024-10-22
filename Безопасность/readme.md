@@ -16,8 +16,6 @@
 
 4 - созданный сертификат
 
-![4 - созданный сертификат](https://github.com/user-attachments/assets/53c66c76-a7c4-4586-849c-34ddf14ddea9)
-
 Почему то сертификат не валидируется, я не знаю сколько может занять его создание через Let's encrypt
 
 ![image](https://github.com/user-attachments/assets/e88b806f-fa35-40d3-b2a2-f8ff3674fe7c)
