@@ -27,3 +27,12 @@
 6 - мне остается только буквально настроить https, но сертификат все еще не выпустился...
 
 ![image](https://github.com/user-attachments/assets/25750756-a089-4416-9f48-5c77614f0a10)
+
+7 - проверка dns
+
+![проверка](https://github.com/user-attachments/assets/2e5a16a0-612f-4764-af47-716c341277e7)
+
+8 - Несмотря на то , что я это не настраивала статический сайт всё равно настроен на https
+
+![image](https://github.com/user-attachments/assets/83782bfa-5381-43d7-ad06-578fe14cd262)
+
