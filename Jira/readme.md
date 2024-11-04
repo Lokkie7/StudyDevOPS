@@ -1,3 +1,5 @@
+XML файлы для workflow в этой же директории
+
 доска scrum
 
 ![1 - доска scrum](https://github.com/user-attachments/assets/6ef6fe0d-6eef-47fa-9165-169bb870651e)
