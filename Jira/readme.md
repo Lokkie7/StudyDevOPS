@@ -16,7 +16,7 @@
 
 новый workflow для задач
 
-![4 - новый workflow для багов](https://github.com/user-attachments/assets/4f8f60ee-151d-4835-9589-2c00907c4b68)
+![4 - новый workflow для задач схема](https://github.com/user-attachments/assets/127a803a-cbf7-4c90-8a57-a2f5ddfb4688)
 
 новый workflow для задач текст
 
