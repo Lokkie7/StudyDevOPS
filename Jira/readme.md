@@ -1,7 +1,3 @@
-запуск проекта в jira
-
-![1 - запуск проекта в jira](https://github.com/user-attachments/assets/153c1968-131a-4d18-b70c-630d7b3a86fc)
-
 доска scrum
 
 ![1 - доска scrum](https://github.com/user-attachments/assets/6ef6fe0d-6eef-47fa-9165-169bb870651e)
